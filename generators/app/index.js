@@ -10,14 +10,58 @@ module.exports = generators.Base.extend({
     // Calling the super constructor is important so our generator is correctly set up
     generators.Base.apply(this, arguments);
 
-    // Next, add your custom code
-    this.option('scope'); // This method adds support for a `--coffee` flag
+    // This makes `moduleName` a required argument.
+    this.argument('moduleName', {
+      type: String,
+      required: true
+    });
   },
   method1: function () {
     console.log('method 1 just ran');
+    this.log(this.sourceRoot());
+    // returns './templates'
+
+    this.log(this.templatePath('index.html'));
+    // returns './templates/index.js'
   },
   method2: function () {
     console.log('method 2 just ran');
+  },
+  writing: function () {
+    var lowerName  = this.moduleName.toLowerCase();
+    var upperName  = this.moduleName.toUpperCase();
+    var folderName = this.moduleName;
+    var ctrlName   =  lowerName + 'Controller';
+
+    this.fs.copyTpl(
+      this.templatePath('app.js'),
+      this.destinationPath(folderName + '/' + this.moduleName + '.app.js'), {
+        name: lowerName
+      }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('controller.js'),
+      this.destinationPath(folderName + '/' + this.moduleName + '.controller.js'), {
+        ctrlName: ctrlName,
+        name: lowerName
+      }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('controller.spec.js'),
+      this.destinationPath(folderName + '/' + this.moduleName + '.controller.spec.js'), {
+        ctrlName: ctrlName,
+        name: lowerName
+      }
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('view.html'),
+      this.destinationPath(folderName + '/' + this.moduleName + '.view.html'), {
+        name: upperName
+      }
+    );
   }
 });
 
