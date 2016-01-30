@@ -12,14 +12,12 @@ module.exports = generators.Base.extend({
 
     // Next, add your custom code
     this.option('scope'); // This method adds support for a `--coffee` flag
-
-    method1: function () {
-      console.log('method 1 just ran');
-    },
-    method2: function () {
-      console.log('method 2 just ran');
-    }
-
+  },
+  method1: function () {
+    console.log('method 1 just ran');
+  },
+  method2: function () {
+    console.log('method 2 just ran');
   }
 });
 
