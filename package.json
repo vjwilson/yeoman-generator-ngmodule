@@ -2,6 +2,11 @@
   "name": "generator-ngmodule",
   "version": "0.0.1",
   "description": "This Yeoman generator creates a folder with a module-declaration file, a controller, a view, and a test file.",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/vjwilson/yeoman-generator-ngmodule.git"
+  },
+  "homepage": "https://github.com/vjwilson/yeoman-generator-ngmodule",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +16,14 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "Van J. Wilson",
+  "author": {
+    "name": "Van J. Wilson",
+    "email": "van.wilson1992@alumni.unc.edu",
+    "url": "http://vanwilson.info"
+  },
+  "bugs": { 
+    "url" : "https://github.com/vjwilson/yeoman-generator-ngmodule/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "yeoman-generator": "^0.22.5"

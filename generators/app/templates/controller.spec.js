@@ -7,7 +7,7 @@ describe('<%= ctrlName %>', function() {
 
     beforeEach(module('<%= name %>.controller'));
 
-    beforeEach(inject(function($controller, $rootScope,n) {
+    beforeEach(inject(function($controller, $rootScope) {
         scope = $rootScope.$new();
 
         <%= ctrlName %> = $controller('<%= ctrlName %>', {

@@ -16,17 +16,6 @@ module.exports = generators.Base.extend({
       required: true
     });
   },
-  method1: function () {
-    console.log('method 1 just ran');
-    this.log(this.sourceRoot());
-    // returns './templates'
-
-    this.log(this.templatePath('index.html'));
-    // returns './templates/index.js'
-  },
-  method2: function () {
-    console.log('method 2 just ran');
-  },
   writing: function () {
     var lowerName  = this.moduleName.toLowerCase();
     var upperName  = this.moduleName.toUpperCase();
