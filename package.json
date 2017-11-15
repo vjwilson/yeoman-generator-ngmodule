@@ -1,6 +1,6 @@
 {
   "name": "generator-ngmodule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This Yeoman generator creates a folder with a module-declaration file, a controller, a view, and a test file.",
   "repository" : {
     "type" : "git",
