@@ -1,3 +1,7 @@
+# DEPRECATED
+
+**This package has not been maintained for over a year. It was originally meant as a learning experiment. Do not use as-is. It will not work at all with Angular version 2 or greater.**
+
 # generator-ngmodule
 
 This Yeoman generator creates a "module" in the sense of a collection of files needed to produce a state in your Angular app. This folder consist of a module-declaration file, a controller, a view, and a Jasmine test file.
